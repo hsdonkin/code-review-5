@@ -14,6 +14,7 @@
          'spec/*spec.js'
        ],
        webpack: webpackConfig,
+
        // list of files / patterns to exclude
        exclude: [
        ],

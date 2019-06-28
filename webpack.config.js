@@ -9,6 +9,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
           path: path.resolve(__dirname, 'dist')
       },
 
+      // added this to try and fix the consoles from appearing always at line 1
+      devtool: 'eval-source-map',
+
+
       plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
@@ -17,6 +21,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
           inject: 'body'
         })
       ],
+
+
+
+
 
       module: {
        rules: [
@@ -27,7 +35,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
              'css-loader'
            ]
          },
-         
+         {
+
+         },
 
        ]
      }
