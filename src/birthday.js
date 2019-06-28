@@ -3,11 +3,10 @@ export let inputAgeDate = new Date ("June 27, 1919");
 export let currentDate = new Date();
 export let expectedDeathDate = new Date("June 27, 1950");
 expectedDeathDate.setFullYear(inputAgeDate.getFullYear() + 88);
-console.log(expectedDeathDate);
-console.log(expectedDeathDate.getFullYear());
+
 
 export let expectedLifeDifference = ageDifferenceCalc(inputAgeDate, currentDate, expectedDeathDate);
-console.log("This is the value of expLifeDifference: " + expectedLifeDifference);
+
 
 
 export function mercuryAgeCalc(age, currentDate) {
@@ -28,11 +27,11 @@ export function jupiterAgeCalc(age, currentDate) {
 
 export function ageDifferenceCalc(age, current, expiration){
     let ageYear = age.getFullYear();
-    console.log(ageYear);
+
     let currentYear = current.getFullYear();
-    console.log(currentYear);
+
     let expYear = expiration.getFullYear();
-    console.log(expYear);
-    console.log((expYear - ageYear) - (currentYear - ageYear));
+
+
     return (expYear - ageYear) - (currentYear - ageYear);
 }
