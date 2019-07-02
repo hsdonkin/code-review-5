@@ -1,5 +1,5 @@
 // import {inputAgeDate, currentDate, expectedDeathDate, mercuryAgeCalc, venusAgeCalc, marsAgeCalc, jupiterAgeCalc, ageDifferenceCalc, expectedLifeDifference} from "./../src/birthday.js";
-import {Person, samplePerson, planetFactor} from "./../src/agecalc.js";
+import {Person, samplePerson} from "./../src/agecalc.js";
 
 
 describe ('planet age', function(){
@@ -21,7 +21,7 @@ describe ('planet age', function(){
   })
 
   it('take a base life expenctancy and a sample age, and return the difference between the two', function(){
-  
+
     expect(samplePerson.lifeExpCalc()).toEqual(20);
   })
 
