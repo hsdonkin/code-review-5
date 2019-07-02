@@ -23,9 +23,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
       ],
 
 
-
-
-
       module: {
        rules: [
          {
@@ -36,8 +33,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
            ]
          },
          {
-
-         },
+        test: /\.js$/,
+        exclude: /node_modules/,
+                
+        loader: "eslint-loader",
+        options: {
+          // eslint options (if necessary)
+        }
+      }
 
        ]
      }
