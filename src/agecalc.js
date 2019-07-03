@@ -1,4 +1,4 @@
-class Person {
+export class Person {
   constructor(birthday, age, expectedDeath){
     this.birthday = new Date(birthday);
     this.currentDate = new Date();
