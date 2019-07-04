@@ -20,7 +20,8 @@ $(document).ready(function(){
     // let planetFactor = factorAssigner(userPlanet);
 
     $(".output").append(`<div>If you were born on ${userDOB}, then your age on ${userPlanet} would be: ${userPerson.planetaryAgeCalc(factorAssigner(userPlanet))} </div>`);
-    $(".output").append(`<div>Your estimated death date on Earth would be ${userPerson.deathDate} </div>`);
+    $(".output").append(`Your current age in Earth years is ${userPerson.age}.`);
+    $(".output").append(`<div>Your estimated death date on Earth would be: ${userPerson.deathDate}. </div>`);
 
   })
 })
