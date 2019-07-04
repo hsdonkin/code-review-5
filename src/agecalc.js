@@ -3,7 +3,7 @@ export class Person {
     this.birthday = new Date(birthday);
     this.currentDate = new Date();
     this.age = (this.currentDate.getFullYear() - this.birthday.getFullYear());
-    this.lifeExpectancy = 120;
+    this.lifeExpectancy = 88;
     this.deathDate = new Date("January 1, 1945");
     this.lifeLeft = "";
   }
@@ -35,3 +35,12 @@ Person.prototype.lifeExpOnPlanet = function(planetFactor){
 export const samplePerson = new Person("June 28, 1919");
 samplePerson.calcDeath();
 console.log(samplePerson);
+
+///// planetFactor logic
+export const planetList = ["mercury", "venus", "earth", "mars", "jupiter"];
+export const planetFactors = [0.24, 0.62, 1, 1.88, 11.86];
+
+export function factorAssigner(planet){
+  let indexNumber = planetList.indexOf(planet);
+  return planetFactors[indexNumber];
+}

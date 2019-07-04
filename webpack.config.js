@@ -12,6 +12,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
       // added this to try and fix the consoles from appearing always at line 1
       devtool: 'eval-source-map',
 
+      // this lets the dev server run
+      devServer: {
+        contentBase: './dist'
+      },
 
       plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -35,7 +39,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
          {
         test: /\.js$/,
         exclude: /node_modules/,
-                
+
         loader: "eslint-loader",
         options: {
           // eslint options (if necessary)
